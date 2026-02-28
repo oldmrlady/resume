@@ -49,7 +49,6 @@
     }
 
     .site-title {
-      font-family: 'Geist Mono', monospace;
       font-weight: 300;
       font-size: 0.65rem;
       letter-spacing: 0.22em;
@@ -65,6 +64,7 @@
       gap: 3.5rem 3rem;
     }
 
+    /* ── VIDEO CARD ── */
     .video-item {
       opacity: 0;
       transform: translateY(24px);
@@ -79,32 +79,47 @@
     .video-item:nth-child(5) { animation-delay: 0.84s; }
     .video-item:nth-child(6) { animation-delay: 0.92s; }
 
-    .video-embed {
+    .video-thumb {
       position: relative;
       width: 100%;
       padding-bottom: 56.25%;
       background: #e8e5df;
       overflow: hidden;
-      transition: opacity 0.2s;
     }
 
-    .video-item:hover .video-embed { opacity: 0.82; }
-
-    .video-embed iframe {
+    .video-thumb img {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
-      border: none;
+      object-fit: cover;
       display: block;
-      pointer-events: none;
+      transition: opacity 0.25s;
     }
 
-    .video-click-overlay {
+    .video-item:hover .video-thumb img { opacity: 0.78; }
+
+    /* Play button */
+    .play-btn {
       position: absolute;
       inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       z-index: 2;
-      cursor: pointer;
+    }
+
+    .play-btn svg {
+      width: 48px;
+      height: 48px;
+      opacity: 0;
+      transform: scale(0.85);
+      transition: opacity 0.25s, transform 0.25s;
+    }
+
+    .video-item:hover .play-btn svg {
+      opacity: 1;
+      transform: scale(1);
     }
 
     .video-meta {
@@ -156,7 +171,7 @@
       position: fixed;
       inset: 0;
       z-index: 1000;
-      background: rgba(10, 10, 10, 0.92);
+      background: rgba(10, 10, 10, 0.93);
       align-items: center;
       justify-content: center;
       padding: 2rem;
@@ -261,7 +276,6 @@
       .video-grid { grid-template-columns: 1fr; }
       header, main, footer, .grid-divider { padding-left: 1.5rem; padding-right: 1.5rem; }
       header { flex-direction: column; gap: 0.5rem; padding-top: 2rem; padding-bottom: 1.75rem; }
-      .video-meta { flex-direction: column; gap: 0.35rem; }
       main { padding-top: 2.5rem; }
       .lightbox { padding: 0; background: #000; }
       .lightbox-inner { max-width: 100%; display: flex; align-items: center; flex-direction: column; justify-content: center; height: 100%; }
@@ -280,9 +294,14 @@
     <div class="video-grid">
 
       <div class="video-item" data-vimeo="1168385235" data-hash="21fdc1aae8">
-        <div class="video-embed">
-          <div class="video-click-overlay"></div>
-          <iframe src="https://player.vimeo.com/video/1168385235?h=21fdc1aae8&title=0&byline=0&portrait=0&badge=0&autopause=0" allowfullscreen allow="autoplay; fullscreen; picture-in-picture"></iframe>
+        <div class="video-thumb">
+          <img src="" alt="Physical Season 2 Official Trailer" data-thumb="1168385235" />
+          <div class="play-btn">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <polygon points="26,20 26,44 46,32" fill="white"/>
+            </svg>
+          </div>
         </div>
         <div class="video-meta">
           <span class="video-show">Physical</span>
@@ -293,9 +312,14 @@
       </div>
 
       <div class="video-item" data-vimeo="1168341875" data-hash="360fdd5023">
-        <div class="video-embed">
-          <div class="video-click-overlay"></div>
-          <iframe src="https://player.vimeo.com/video/1168341875?h=360fdd5023&title=0&byline=0&portrait=0&badge=0&autopause=0" allowfullscreen allow="autoplay; fullscreen; picture-in-picture"></iframe>
+        <div class="video-thumb">
+          <img src="" alt="The Handmaid's Tale An Unlikely Alliance EPK" data-thumb="1168341875" />
+          <div class="play-btn">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <polygon points="26,20 26,44 46,32" fill="white"/>
+            </svg>
+          </div>
         </div>
         <div class="video-meta">
           <span class="video-show">The Handmaid's Tale</span>
@@ -306,9 +330,14 @@
       </div>
 
       <div class="video-item" data-vimeo="1168341818" data-hash="6509ab2611">
-        <div class="video-embed">
-          <div class="video-click-overlay"></div>
-          <iframe src="https://player.vimeo.com/video/1168341818?h=6509ab2611&title=0&byline=0&portrait=0&badge=0&autopause=0" allowfullscreen allow="autoplay; fullscreen; picture-in-picture"></iframe>
+        <div class="video-thumb">
+          <img src="" alt="Sing Thriller Official Trailer" data-thumb="1168341818" />
+          <div class="play-btn">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <polygon points="26,20 26,44 46,32" fill="white"/>
+            </svg>
+          </div>
         </div>
         <div class="video-meta">
           <span class="video-show">Sing</span>
@@ -325,7 +354,7 @@
 
   <footer>
     <span class="footer-copy">&copy; 2026 Graham Carroll</span>
-    <a class="footer-email" href="/cdn-cgi/l/email-protection#d6b1a4b7beb7bbb2b5b7a4a4b9baba96b1bbb7bfbaf8b5b9bb"><span class="__cf_email__" data-cfemail="076075666f666a6364667575686b6b47606a666e6b2964686a">[email&#160;protected]</span></a>
+    <a class="footer-email" href="mailto:grahamdcarroll@gmail.com">grahamdcarroll@gmail.com</a>
   </footer>
 
   <!-- LIGHTBOX -->
@@ -338,7 +367,17 @@
     </div>
   </div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
+    // Load Vimeo thumbnails via oEmbed
+    document.querySelectorAll('img[data-thumb]').forEach(img => {
+      const id = img.dataset.thumb;
+      fetch('https://vimeo.com/api/oembed.json?url=https://vimeo.com/' + id + '&width=1280')
+        .then(r => r.json())
+        .then(data => { img.src = data.thumbnail_url; })
+        .catch(() => { img.closest('.video-thumb').style.background = '#d0cdc7'; });
+    });
+
+    // Lightbox
     const lightbox = document.getElementById('lightbox');
     const iframe   = document.getElementById('lightbox-iframe');
     const closeBtn = document.getElementById('lightbox-close');
@@ -367,4 +406,10 @@
       });
     });
 
-    closeBtn.addEv
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+
+</body>
+</html>
