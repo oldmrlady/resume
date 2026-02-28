@@ -100,6 +100,13 @@
       pointer-events: none;
     }
 
+    .video-click-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      cursor: pointer;
+    }
+
     .video-meta {
       margin-top: 1rem;
       display: flex;
@@ -274,6 +281,7 @@
 
       <div class="video-item" data-vimeo="1168385235" data-hash="21fdc1aae8">
         <div class="video-embed">
+          <div class="video-click-overlay"></div>
           <iframe src="https://player.vimeo.com/video/1168385235?h=21fdc1aae8&title=0&byline=0&portrait=0&badge=0&autopause=0" allowfullscreen allow="autoplay; fullscreen; picture-in-picture"></iframe>
         </div>
         <div class="video-meta">
@@ -286,6 +294,7 @@
 
       <div class="video-item" data-vimeo="1168341875" data-hash="360fdd5023">
         <div class="video-embed">
+          <div class="video-click-overlay"></div>
           <iframe src="https://player.vimeo.com/video/1168341875?h=360fdd5023&title=0&byline=0&portrait=0&badge=0&autopause=0" allowfullscreen allow="autoplay; fullscreen; picture-in-picture"></iframe>
         </div>
         <div class="video-meta">
@@ -298,6 +307,7 @@
 
       <div class="video-item" data-vimeo="1168341818" data-hash="6509ab2611">
         <div class="video-embed">
+          <div class="video-click-overlay"></div>
           <iframe src="https://player.vimeo.com/video/1168341818?h=6509ab2611&title=0&byline=0&portrait=0&badge=0&autopause=0" allowfullscreen allow="autoplay; fullscreen; picture-in-picture"></iframe>
         </div>
         <div class="video-meta">
@@ -315,7 +325,7 @@
 
   <footer>
     <span class="footer-copy">&copy; 2026 Graham Carroll</span>
-    <a class="footer-email" href="mailto:grahamdcarroll@gmail.com">grahamdcarroll@gmail.com</a>
+    <a class="footer-email" href="/cdn-cgi/l/email-protection#d6b1a4b7beb7bbb2b5b7a4a4b9baba96b1bbb7bfbaf8b5b9bb"><span class="__cf_email__" data-cfemail="076075666f666a6364667575686b6b47606a666e6b2964686a">[email&#160;protected]</span></a>
   </footer>
 
   <!-- LIGHTBOX -->
@@ -328,7 +338,7 @@
     </div>
   </div>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     const lightbox = document.getElementById('lightbox');
     const iframe   = document.getElementById('lightbox-iframe');
     const closeBtn = document.getElementById('lightbox-close');
@@ -357,10 +367,4 @@
       });
     });
 
-    closeBtn.addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
-  </script>
-
-</body>
-</html>
+    closeBtn.addEv
