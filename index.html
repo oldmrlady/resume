@@ -295,7 +295,7 @@
 
       <div class="video-item" data-vimeo="1168385235" data-hash="21fdc1aae8">
         <div class="video-thumb">
-          <img src="" alt="Physical Season 2 Official Trailer" data-thumb="1168385235" />
+          <img src="PhysicalSeason2.jpg" alt="Physical Season 2 Official Trailer" />
           <div class="play-btn">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
@@ -313,7 +313,7 @@
 
       <div class="video-item" data-vimeo="1168341875" data-hash="360fdd5023">
         <div class="video-thumb">
-          <img src="" alt="The Handmaid's Tale An Unlikely Alliance EPK" data-thumb="1168341875" />
+          <img src="HandmaidsUnlikely.jpg" alt="The Handmaid's Tale An Unlikely Alliance EPK" />
           <div class="play-btn">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
@@ -331,7 +331,7 @@
 
       <div class="video-item" data-vimeo="1168341818" data-hash="6509ab2611">
         <div class="video-thumb">
-          <img src="" alt="Sing Thriller Official Trailer" data-thumb="1168341818" />
+          <img src="SingThriller.jpg" alt="Sing Thriller Official Trailer" />
           <div class="play-btn">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
@@ -354,7 +354,7 @@
 
   <footer>
     <span class="footer-copy">&copy; 2026 Graham Carroll</span>
-    <a class="footer-email" href="mailto:grahamdcarroll@gmail.com">grahamdcarroll@gmail.com</a>
+    <a class="footer-email" href="/cdn-cgi/l/email-protection#6106130009000c05020013130e0d0d21060c00080d4f020e0c"><span class="__cf_email__" data-cfemail="aacdd8cbc2cbc7cec9cbd8d8c5c6c6eacdc7cbc3c684c9c5c7">[email&#160;protected]</span></a>
   </footer>
 
   <!-- LIGHTBOX -->
@@ -367,16 +367,7 @@
     </div>
   </div>
 
-  <script>
-    // Load Vimeo thumbnails via oEmbed
-    document.querySelectorAll('img[data-thumb]').forEach(img => {
-      const id = img.dataset.thumb;
-      fetch('https://vimeo.com/api/oembed.json?url=https://vimeo.com/' + id + '&width=1280')
-        .then(r => r.json())
-        .then(data => { img.src = data.thumbnail_url; })
-        .catch(() => { img.closest('.video-thumb').style.background = '#d0cdc7'; });
-    });
-
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Lightbox
     const lightbox = document.getElementById('lightbox');
     const iframe   = document.getElementById('lightbox-iframe');
@@ -406,10 +397,4 @@
       });
     });
 
-    closeBtn.addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
-  </script>
-
-</body>
-</html>
+    closeBtn.addEv
