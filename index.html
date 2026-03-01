@@ -19,11 +19,11 @@
     .video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3.5rem 3rem; }
     .video-item { opacity: 0; transform: translateY(24px); animation: fadeUp 0.8s ease forwards; cursor: pointer; }
     .video-item:nth-child(1) { animation-delay: 0.3s; }
-    .video-item:nth-child(2) { animation-delay: 0.48s; }
-    .video-item:nth-child(3) { animation-delay: 0.62s; }
-    .video-item:nth-child(4) { animation-delay: 0.74s; }
-    .video-item:nth-child(5) { animation-delay: 0.84s; }
-    .video-item:nth-child(6) { animation-delay: 0.92s; }
+    .video-item:nth-child(2) { animation-delay: 0.42s; }
+    .video-item:nth-child(3) { animation-delay: 0.54s; }
+    .video-item:nth-child(4) { animation-delay: 0.64s; }
+    .video-item:nth-child(5) { animation-delay: 0.74s; }
+    .video-item:nth-child(6) { animation-delay: 0.82s; }
     .video-thumb { position: relative; width: 100%; padding-bottom: 56.25%; background: #e8e5df; overflow: hidden; pointer-events: none; }
     .video-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity 0.25s; pointer-events: none; }
     .video-item:hover .video-thumb img { opacity: 0.78; }
@@ -76,12 +76,7 @@
       <div class="video-item" onclick="playVideo('1168385235','21fdc1aae8')">
         <div class="video-thumb">
           <img src="PhysicalSeason2.jpg" alt="Physical Season 2 Official Trailer" class="anchor-right" />
-          <div class="play-btn">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
-              <polygon points="26,20 26,44 46,32" fill="white"/>
-            </svg>
-          </div>
+          <div class="play-btn"><svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/><polygon points="26,20 26,44 46,32" fill="white"/></svg></div>
         </div>
         <div class="video-meta">
           <span class="video-show">Physical</span>
@@ -94,12 +89,7 @@
       <div class="video-item" onclick="playVideo('1168341875','360fdd5023')">
         <div class="video-thumb">
           <img src="HandmaidsUnlikelyAlliance2.png" alt="The Handmaids Tale An Unlikely Alliance EPK" />
-          <div class="play-btn">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
-              <polygon points="26,20 26,44 46,32" fill="white"/>
-            </svg>
-          </div>
+          <div class="play-btn"><svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/><polygon points="26,20 26,44 46,32" fill="white"/></svg></div>
         </div>
         <div class="video-meta">
           <span class="video-show">The Handmaid's Tale</span>
@@ -112,18 +102,52 @@
       <div class="video-item" onclick="playVideo('1168341818','6509ab2611')">
         <div class="video-thumb">
           <img src="SingThriller.jpg" alt="Sing Thriller Official Trailer" />
-          <div class="play-btn">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
-              <polygon points="26,20 26,44 46,32" fill="white"/>
-            </svg>
-          </div>
+          <div class="play-btn"><svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/><polygon points="26,20 26,44 46,32" fill="white"/></svg></div>
         </div>
         <div class="video-meta">
           <span class="video-show">Sing</span>
           <span class="video-subtitle">"Thriller"</span>
           <span class="video-type">Official Trailer</span>
           <span class="video-client">Netflix / Illumination</span>
+        </div>
+      </div>
+
+      <div class="video-item" onclick="playVideo('1169217209','e903e77f0a')">
+        <div class="video-thumb">
+          <img src="BlackCake_SensationalReview_Thumbnail.png" alt="Black Cake Sensational Review 30 TV Spot" />
+          <div class="play-btn"><svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/><polygon points="26,20 26,44 46,32" fill="white"/></svg></div>
+        </div>
+        <div class="video-meta">
+          <span class="video-show">Black Cake</span>
+          <span class="video-subtitle">"Sensational Review"</span>
+          <span class="video-type">30 TV Spot</span>
+          <span class="video-client">Hulu</span>
+        </div>
+      </div>
+
+      <div class="video-item" onclick="playVideo('1169217312','ee38a97cc0')">
+        <div class="video-thumb">
+          <img src="Babylon_Invited_Thumbnail.png" alt="Babylon Invited 30 TV Spot" />
+          <div class="play-btn"><svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/><polygon points="26,20 26,44 46,32" fill="white"/></svg></div>
+        </div>
+        <div class="video-meta">
+          <span class="video-show">Babylon</span>
+          <span class="video-subtitle">"Invited"</span>
+          <span class="video-type">30 TV Spot</span>
+          <span class="video-client">Paramount</span>
+        </div>
+      </div>
+
+      <div class="video-item" onclick="playVideo('373544055','af55c3f01a')">
+        <div class="video-thumb">
+          <img src="_Midway_Patriots_Thumbnail.png" alt="Midway Patriots 30 TV Spot" />
+          <div class="play-btn"><svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/><polygon points="26,20 26,44 46,32" fill="white"/></svg></div>
+        </div>
+        <div class="video-meta">
+          <span class="video-show">Midway</span>
+          <span class="video-subtitle">"Patriots"</span>
+          <span class="video-type">30 TV Spot</span>
+          <span class="video-client">Lionsgate</span>
         </div>
       </div>
 
