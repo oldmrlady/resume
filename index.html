@@ -24,6 +24,8 @@
     .video-item:nth-child(4) { animation-delay: 0.64s; }
     .video-item:nth-child(5) { animation-delay: 0.74s; }
     .video-item:nth-child(6) { animation-delay: 0.82s; }
+    .video-item:nth-child(7) { animation-delay: 0.9s; }
+    .video-item:nth-child(8) { animation-delay: 0.98s; }
     .video-thumb { position: relative; width: 100%; padding-bottom: 56.25%; background: #e8e5df; overflow: hidden; pointer-events: none; }
     .video-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity 0.25s; pointer-events: none; }
     .video-item:hover .video-thumb img { opacity: 0.78; }
@@ -151,6 +153,32 @@
         </div>
       </div>
 
+      <div class="video-item" onclick="playYoutube('IBfz97fN9QM')">
+        <div class="video-thumb">
+          <img src="https://img.youtube.com/vi/IBfz97fN9QM/hqdefault.jpg" alt="Ziwe - Jaboukie Young-White" />
+          <div class="play-btn"><svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/><polygon points="26,20 26,44 46,32" fill="white"/></svg></div>
+        </div>
+        <div class="video-meta">
+          <span class="video-show">Ziwe</span>
+          <span class="video-subtitle">"Jaboukie Young-White"</span>
+          <span class="video-type">Interview</span>
+          <span class="video-client">Irony Point</span>
+        </div>
+      </div>
+
+      <div class="video-item" onclick="playYoutube('LpFdrz9OW9w')">
+        <div class="video-thumb">
+          <img src="https://img.youtube.com/vi/LpFdrz9OW9w/hqdefault.jpg" alt="Ziwe - Porsha Williams" />
+          <div class="play-btn"><svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/><polygon points="26,20 26,44 46,32" fill="white"/></svg></div>
+        </div>
+        <div class="video-meta">
+          <span class="video-show">Ziwe</span>
+          <span class="video-subtitle">"Porsha Williams"</span>
+          <span class="video-type">Interview</span>
+          <span class="video-client">Irony Point</span>
+        </div>
+      </div>
+
     </div>
   </main>
 
@@ -175,6 +203,17 @@
       var lb = document.getElementById("lightbox");
       var fr = document.getElementById("lightbox-iframe");
       fr.src = "https://player.vimeo.com/video/" + vimeoId + "?h=" + hash + "&autoplay=1&title=0&byline=0&portrait=0&badge=0";
+      lb.classList.add("open");
+      document.body.style.overflow = "hidden";
+      requestAnimationFrame(function() {
+        requestAnimationFrame(function() { lb.classList.add("visible"); });
+      });
+    }
+
+    function playYoutube(videoId) {
+      var lb = document.getElementById("lightbox");
+      var fr = document.getElementById("lightbox-iframe");
+      fr.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&rel=0";
       lb.classList.add("open");
       document.body.style.overflow = "hidden";
       requestAnimationFrame(function() {
